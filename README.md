@@ -244,3 +244,16 @@ Offline 3 asks for `Car`, `Bike`, `Truck` or `Exit`, then the details one per li
     │   └── ServiceException.java
     └── CSE_108_Offline_3__Inheritance_Interface_Exception_.pdf
 ```
+
+## Notes
+
+Things found by reading and running the code. The source is unchanged.
+
+- **Offline 1:** the clone constructor allocates a new matrix and prints the original's values, but it never copies them into the clone, so the clone's own elements are uninitialised.
+- **Offline 1:** the default constructor makes a zero-size matrix with a null pointer, so `getsum()` on it returns 0.
+- **Offline 2:** the specification asks for input validation in functions with arguments. The code does not validate ids, names or constituencies.
+- **Offline 2:** the `PoliticalParty` copy constructor reads all 1,000 slots, so copying a party with fewer than 1,000 members would dereference null pointers. `main()` does not trigger it, because gcc builds the returned party in place.
+- **Offline 2:** it builds clean under AddressSanitizer and UndefinedBehaviorSanitizer with the supplied `main()`.
+- **Offline 3:** the specification asks for a collection. `WorkshopManager` uses a fixed array instead, which is what causes the heap requirement above.
+- **Offline 3:** the interface is spelled `Servicable` in the code, and the error text says the cost "must be positive" although zero is accepted.
+- The sample outputs above were produced by compiling and running the files in this repository.
