@@ -71,3 +71,19 @@ The real output of `main()`, which builds a 4 x 3 rectangle, clones it and runs 
 The output of the supplied `main()`. It matches the expected-output comment in the file line for line, except that the reference leaves a blank line between blocks and the program does not print one:
 
 <img src="./.github/assets/readme/oop-election-run.jpg" alt="Terminal output of the election program: members of ABC, nominations, a merge of XYZ into ABC and the new party Renegades" width="100%" />
+
+### Offline 3: the car workshop
+
+A console program, "MECHANIK", that reads vehicles from the keyboard. `Vehicle` is abstract, `Car`, `Bike` and `Truck` extend it, and each also implements the `Servicable` interface.
+
+| Vehicle | Extra field | Service cost |
+| --- | --- | --- |
+| Car | number of doors | base + doors x 500 |
+| Bike | engine capacity | base + capacity x 2 |
+| Truck | load capacity | base + capacity x 1000 |
+
+`ServiceException` is a custom checked exception. It is thrown for an empty or null registration number, for a negative base cost (both messages at once if both are wrong), and from `service()` when the cost goes above `MAX_LIMIT`, 500,000,000. `Main` handles it with `try`, `catch` and `finally`, and a vehicle is only added to the workshop after it has been serviced successfully. At the end the program lists every vehicle and prints the total revenue.
+
+A real session: three valid vehicles, a car with an empty registration number and a negative cost, a car whose cost is over the limit, then `Exit`:
+
+<img src="./.github/assets/readme/oop-workshop-run.jpg" alt="Terminal output of the workshop program: three vehicles added, two rejected with ServiceException messages, then the vehicle list and total revenue of 47300.0 BDT" width="100%" />
