@@ -53,3 +53,21 @@ A line, a triangle or a rectangle is stored as a matrix: one row per point, one 
 The real output of `main()`, which builds a 4 x 3 rectangle, clones it and runs four sum tests:
 
 <img src="./.github/assets/readme/oop-figure-run.jpg" alt="Terminal output of the Figure program showing construction, the clone, four sum tests and three destructor messages" width="100%" />
+
+### Offline 2: the election system
+
+`PartyMember` holds an id, a name, an asset value and the constituency the member is nominated for. `PoliticalParty` keeps up to 1,000 members in an array of `PartyMember*`, allocating an object only when someone joins and freeing it when they leave. No STL containers are used, as the specification requires.
+
+| Operation | What it does |
+| --- | --- |
+| `join_party(PartyMember)` | Copies the member in and gives them the next id. Ids are never reused. |
+| `join_party(PoliticalParty&)` | Moves every member of the other party over, clears their nominations and empties the other party. |
+| `leave_party(id)` | Deletes the member and closes the gap in the array. |
+| `nominate_member(id, area)` / `cancel_nomination(id)` | Sets or clears the constituency. |
+| `search_member(area)` | Returns the nominated member by value, or an empty `PartyMember`. |
+| `form_new_party(name)` | Moves every member who has no nomination into a new party. |
+| `show_all_members()` / `show_nominated_members()` | Print in the format of the reference output. |
+
+The output of the supplied `main()`. It matches the expected-output comment in the file line for line, except that the reference leaves a blank line between blocks and the program does not print one:
+
+<img src="./.github/assets/readme/oop-election-run.jpg" alt="Terminal output of the election program: members of ABC, nominations, a merge of XYZ into ABC and the new party Renegades" width="100%" />
