@@ -173,3 +173,24 @@ classDiagram
     WorkshopManager o-- Vehicle
     Exception <|-- ServiceException
 ```
+
+### How a vehicle gets in
+
+```mermaid
+flowchart TD
+    A[Read a command] --> B{Car, Bike,<br/>Truck or Exit?}
+    B -- Exit --> Z[List vehicles and total revenue]
+    B -- other --> U[Print the unknown command message]
+    B -- vehicle --> C[Read registration, owner, cost and extra field]
+    C --> D{Valid registration<br/>and cost?}
+    D -- no --> E[ServiceException]
+    D -- yes --> F{Final cost over<br/>500,000,000?}
+    F -- yes --> E
+    F -- no --> G[Print the service result]
+    G --> H[Add to the workshop]
+    E --> I[Print INPUT ERROR]
+    H --> J[finally: print the divider]
+    I --> J
+    U --> J
+    J --> A
+```
