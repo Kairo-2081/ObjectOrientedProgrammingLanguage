@@ -136,3 +136,40 @@ classDiagram
     }
     PoliticalParty "1" o-- "0..1000" PartyMember : owns
 ```
+
+### Workshop (Offline 3)
+
+```mermaid
+classDiagram
+    class Servicable {
+        <<interface>>
+        +service()
+        +serviceCost() double
+    }
+    class Vehicle {
+        <<abstract>>
+        -String registrationNumber
+        -String ownerName
+        -double baseServiceCost
+        +getFinalCost() double
+        +display()
+    }
+    class Car { -int numDoors }
+    class Bike { -double capacity }
+    class Truck { -double capacity }
+    class WorkshopManager {
+        -Vehicle[] vehicles
+        +addVehicle(v)
+        +displayDetails()
+        +calculateTotal() double
+    }
+    class ServiceException
+    Vehicle <|-- Car
+    Vehicle <|-- Bike
+    Vehicle <|-- Truck
+    Servicable <|.. Car
+    Servicable <|.. Bike
+    Servicable <|.. Truck
+    WorkshopManager o-- Vehicle
+    Exception <|-- ServiceException
+```
