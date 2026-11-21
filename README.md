@@ -109,3 +109,30 @@ classDiagram
         +~Figure()
     }
 ```
+
+### Election system (Offline 2)
+
+```mermaid
+classDiagram
+    class PartyMember {
+        -int member_id
+        -string name
+        -long asset_value
+        -string nominated_for
+        +show_member_details()
+    }
+    class PoliticalParty {
+        -string name
+        -PartyMember* members[1000]
+        -int member_count
+        -int current_id
+        +join_party(PartyMember)
+        +join_party(PoliticalParty)
+        +leave_party(id)
+        +nominate_member(id, area)
+        +cancel_nomination(id)
+        +search_member(area) PartyMember
+        +form_new_party(name) PoliticalParty
+    }
+    PoliticalParty "1" o-- "0..1000" PartyMember : owns
+```
