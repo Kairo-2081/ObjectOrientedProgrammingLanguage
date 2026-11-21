@@ -19,3 +19,15 @@ inheritance with interfaces and exceptions.
 [Notes](#notes)
 
 </div>
+
+## At a glance
+
+| | Offline 1 | Offline 2 | Offline 3 |
+| --- | --- | --- | --- |
+| **Language** | C++ | C++ | Java |
+| **Topic** | Encapsulation, constructors, destructor, overloaded `getsum` | Dynamic objects, overloaded constructors, copy constructor, passing and returning objects | Inheritance, interface, custom checked exception |
+| **Program** | A `Figure` class holding a matrix of points | An election system with `PartyMember` and `PoliticalParty` | A car workshop with `Car`, `Bike` and `Truck` |
+| **Folder** | `Constructor, Destructor And Overloading/` | `Method Overloading/` | `Java Inheritance/` |
+| **Deadline** | 12 December 2025 | 9 January 2026 | 6 February 2026 |
+
+Each folder also holds the assignment specification as a PDF or Word file.
