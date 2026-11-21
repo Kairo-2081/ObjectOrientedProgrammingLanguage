@@ -257,3 +257,7 @@ Things found by reading and running the code. The source is unchanged.
 - **Offline 3:** the specification asks for a collection. `WorkshopManager` uses a fixed array instead, which is what causes the heap requirement above.
 - **Offline 3:** the interface is spelled `Servicable` in the code, and the error text says the cost "must be positive" although zero is accepted.
 - The sample outputs above were produced by compiling and running the files in this repository.
+
+## Credits
+
+Written by Raian Rashid Mayel (2405010) for CSE 108, Department of CSE, BUET. The problem statements belong to the course.
