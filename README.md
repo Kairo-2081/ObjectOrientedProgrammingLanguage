@@ -194,3 +194,21 @@ flowchart TD
     U --> J
     J --> A
 ```
+
+### Forming a new party
+
+```mermaid
+sequenceDiagram
+    participant M as main
+    participant P1 as ABC
+    participant P3 as Renegades
+    M->>P1: form_new_party("Renegades")
+    P1->>P3: create an empty party
+    loop members with no nomination
+        P1->>P3: join_party(copy of member)
+    end
+    loop the same members, last first
+        P1->>P1: leave_party(id)
+    end
+    P1-->>M: Renegades
+```
