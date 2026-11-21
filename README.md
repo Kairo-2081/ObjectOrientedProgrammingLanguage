@@ -87,3 +87,25 @@ A console program, "MECHANIK", that reads vehicles from the keyboard. `Vehicle` 
 A real session: three valid vehicles, a car with an empty registration number and a negative cost, a car whose cost is over the limit, then `Exit`:
 
 <img src="./.github/assets/readme/oop-workshop-run.jpg" alt="Terminal output of the workshop program: three vehicles added, two rejected with ServiceException messages, then the vehicle list and total revenue of 47300.0 BDT" width="100%" />
+
+## Design
+
+### `Figure` (Offline 1)
+
+```mermaid
+classDiagram
+    class Figure {
+        -int row
+        -int col
+        -string name
+        -int** matrix
+        -reuse(r, c)
+        -reuse_clean()
+        +Figure()
+        +Figure(r, c, data)
+        +Figure(Figure copy)
+        +getsum() int
+        +getsum(x, y) int
+        +~Figure()
+    }
+```
