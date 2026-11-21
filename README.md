@@ -224,3 +224,23 @@ sequenceDiagram
 Offline 3 needs a bigger heap than the default. `WorkshopManager` allocates an array of 500,000,000 references up front, about 2 GB, so a default JVM stops with `OutOfMemoryError` before the first prompt. Lower `MAX_VEHICLE` in `WorkshopManager.java` if you would rather not raise the heap.
 
 Offline 3 asks for `Car`, `Bike`, `Truck` or `Exit`, then the details one per line. After an error or an unknown command it waits for one more line, so press Enter.
+
+## Repository layout
+
+```text
+.
+├── Constructor, Destructor And Overloading/
+│   ├── Ass1_2405010_Dec25.cpp.cpp
+│   └── Offline Assignment 1.docx
+├── Method Overloading/
+│   ├── 2405010.cpp
+│   ├── your_student_no.cpp          the skeleton that came with the assignment
+│   └── CSE108_Offline 2_Specifications.pdf
+└── Java Inheritance/
+    ├── 2405010/
+    │   ├── Main.java
+    │   ├── Vehicle.java             Vehicle, Car, Bike, Truck and Servicable
+    │   ├── WorkshopManager.java
+    │   └── ServiceException.java
+    └── CSE_108_Offline_3__Inheritance_Interface_Exception_.pdf
+```
