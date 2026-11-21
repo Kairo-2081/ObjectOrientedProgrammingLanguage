@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176" role="img" aria-label="Object Oriented Programming">
+  <rect width="176" height="176" rx="40" fill="#1f2937"/>
+  <rect x="34" y="34" width="52" height="40" rx="8" fill="none" stroke="#7dd3fc" stroke-width="6"/>
+  <rect x="90" y="102" width="52" height="40" rx="8" fill="none" stroke="#a7f3d0" stroke-width="6"/>
+  <rect x="34" y="102" width="52" height="40" rx="8" fill="none" stroke="#fcd34d" stroke-width="6"/>
+  <path d="M60 74v14h56v14M60 88v14" fill="none" stroke="#e5e7eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 74l-6 8h12z" fill="#e5e7eb"/>
+</svg>
