@@ -212,3 +212,15 @@ sequenceDiagram
     end
     P1-->>M: Renegades
 ```
+
+## Run them
+
+| Assignment | Compile | Run |
+| --- | --- | --- |
+| Offline 1 | `g++ "Constructor, Destructor And Overloading/Ass1_2405010_Dec25.cpp.cpp" -o figure` | `./figure` |
+| Offline 2 | `g++ "Method Overloading/2405010.cpp" -o election` | `./election` |
+| Offline 3 | `cd "Java Inheritance/2405010" && javac *.java` | `java -Xmx3g Main` |
+
+Offline 3 needs a bigger heap than the default. `WorkshopManager` allocates an array of 500,000,000 references up front, about 2 GB, so a default JVM stops with `OutOfMemoryError` before the first prompt. Lower `MAX_VEHICLE` in `WorkshopManager.java` if you would rather not raise the heap.
+
+Offline 3 asks for `Car`, `Bike`, `Truck` or `Exit`, then the details one per line. After an error or an unknown command it waits for one more line, so press Enter.
