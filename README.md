@@ -17,6 +17,7 @@ inheritance with interfaces and exceptions.
 [Assignments](#assignments) ·
 [Design](#design) ·
 [Run them](#run-them) ·
+[Layout](#repository-layout) ·
 [Notes](#notes)
 
 </div>
